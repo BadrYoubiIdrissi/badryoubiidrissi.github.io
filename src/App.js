@@ -10,7 +10,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header panel">
           <Particles className="background" params={particleParams}/>
-          <img src={logo} className="App-logo" alt="logo" />
+          <div className="content">
+            <img src={logo} className="App-logo" alt="logo" />
+          </div>
         </header>
         <div className="panel">
         </div>
