@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://badryoubiidrissi.github.io/Portfolio/",
+  "homepage": "https://badryoubiidrissi.github.io/portfolio/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "gsap": "^2.1.2",
