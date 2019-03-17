@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Particles from "react-particles-js";
+import { Controller, Scene } from 'react-scrollmagic';
 import particleParams from "./particles";
 /*import soundWaveParams from "./soundWave";*/
 import logo from "./Full_logo.svg";
@@ -20,27 +21,33 @@ class App extends Component {
             </div>
             <div className="row menu">
               <div className="column">
-                <div className="card">
-                  <img src={head} alt="summary" />
-                  <h4>Summary</h4>
-                </div>
+                <a href="#panel2">
+                  <div className="card">
+                    <img src={head} alt="summary" />
+                    <h4>Summary</h4>
+                  </div>
+                </a>
               </div>
               <div className="column">
-                <div className="card">
-                  <img src={research} alt="research" />
-                  <h4>Research</h4>
-                </div>
+                <a href="#panel2">
+                  <div className="card">
+                    <img src={research} alt="research" />
+                    <h4>Research</h4>
+                  </div>
+                </a>
               </div>
               <div className="column">
-                <div className="card">
-                  <img src={projects} alt="projects" />
-                  <h4>Projects</h4>
-                </div>
+                <a href="#panel2">
+                  <div className="card">
+                    <img src={projects} alt="projects" />
+                    <h4>Projects</h4>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         </header>
-        <div className="panel blue">
+        <div className="panel blue" id="panel2">
           {/*<Particles params={soundWaveParams} className="background"/>*/}
         </div>
       </div>
