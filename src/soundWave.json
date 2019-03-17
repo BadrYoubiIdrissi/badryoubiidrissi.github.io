@@ -1,0 +1,31 @@
+{
+  "fps_limit": 28,
+  "particles": {
+    "number": {
+      "value": 300,
+      "density": {
+        "enable": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 20,
+      "opacity": 0.4
+    },
+    "move": {
+      "speed": 1
+    }
+  },
+  "polygon": {
+    "enable": true,
+    "scale": 0.5,
+    "type": "inline",
+    "move": {
+      "radius": 1
+    },
+    "url": "/wave.svg",
+    "inline": {
+      "arrangement": "equidistant"
+    }
+  }
+}
