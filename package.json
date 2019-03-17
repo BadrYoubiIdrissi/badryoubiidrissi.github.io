@@ -7,19 +7,11 @@
     "gh-pages": "^2.0.1",
     "gsap": "^2.1.2",
     "milligram": "^1.3.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-particles-js": "^2.4.2",
-    "react-scripts": "2.1.8",
-    "react-scrollmagic": "^2.1.0"
+    "particle.js": "^1.0.7",
+    "scrollmagic": "^2.0.6"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "eslintConfig": {
     "extends": "react-app"
