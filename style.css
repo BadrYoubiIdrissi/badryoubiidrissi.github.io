@@ -5,7 +5,7 @@ body,
 }
 
 body{
-  font-size:13px;
+  font-size:11px;
 }
 
 h1,h2,h3,h4{
@@ -92,21 +92,21 @@ a {
 }
 
 #panel2 .container {
-  width: 70%;
-  top: 37%;
+  width: 60%;
+  top: 40%;
   margin-left:7vh; 
 }
 
 .leftBack{
   position:absolute;
   height:100%;
-  left:5vh;
+  left:3vh;
 }
 
 .rightBack{
   position:absolute;
   height:100%;
-  right:5vh;
+  right:3vh;
 }
 
 
