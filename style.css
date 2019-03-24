@@ -1,8 +1,17 @@
 html,
 body,
-#root{
+#root {
   height: 100%;
 }
+
+body{
+  font-size:13px;
+}
+
+h1,h2,h3,h4{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -37,7 +46,7 @@ body,
   padding: 2rem 0 2rem 0;
   border-bottom: 0.3rem solid transparent;
   transition: border-bottom 0.5s;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -70,7 +79,7 @@ body,
 }
 
 .blue {
-  background-color: #1d7ca7;
+  background-image:linear-gradient(to top left, #1d7ca7 , #1f739a);
 }
 
 a {
@@ -78,8 +87,34 @@ a {
   text-decoration: inherit; /* no underline */
 }
 
+#panel2 {
+  color: white;
+}
+
+#panel2 .container {
+  width: 70%;
+  top: 37%;
+  margin-left:7vh; 
+}
+
+.leftBack{
+  position:absolute;
+  height:100%;
+  left:5vh;
+}
+
+.rightBack{
+  position:absolute;
+  height:100%;
+  right:5vh;
+}
+
+
 /* Larger than mobile screen */
 @media (min-width: 40rem) {
+  body{
+    font-size:16px;
+  }
   .App-logo {
     width: 70%;
   }
@@ -91,6 +126,18 @@ a {
   }
   .card img {
     width: 30%;
+  }
+  #panel2 .container {
+    width: 50%;
+    top: 38%;
+    margin:auto; 
+  }
+  .leftBack{
+    left:15vh;
+  }
+  
+  .rightBack{
+    right:15vh;
   }
 }
 
