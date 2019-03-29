@@ -145,6 +145,8 @@ $(window).on("load", function() {
     .add(mapAni(synapses, animateDraw, 0.5))
     .add(mapAni(synapses1, animateDraw, 0.5))
     .add("brain")
+    .from("#panel2 h2", 1, {autoAlpha:0, y:10})
+    .from("#panel2 p", 1, {autoAlpha:0, y:10}, "-=0.5")
     .add(animateDraw(main_syn, 2),"brain")
     .add(animateDraw(secondary_syn, 2), "brain")
     .add("end_syn")

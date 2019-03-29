@@ -5,7 +5,7 @@ body,
 }
 
 body{
-  font-size:13px;
+  font-size:0.5wh;
 }
 
 h1,h2,h3,h4{
@@ -92,21 +92,33 @@ a {
 }
 
 #panel2 .container {
-  width: 70%;
-  top: 37%;
+  width: 60%;
   margin-left:7vh; 
+}
+
+.middle{
+  top: 40%;
 }
 
 .leftBack{
   position:absolute;
   height:100%;
-  left:5vh;
+  left:3vh;
 }
 
 .rightBack{
   position:absolute;
   height:100%;
-  right:5vh;
+  right:3vh;
+}
+
+.bigScreen{
+  display:None;
+}
+
+.rect{
+  background-color: white;
+  border-radius: 1em;
 }
 
 
@@ -138,6 +150,9 @@ a {
   
   .rightBack{
     right:15vh;
+  }
+  .bigScreen{
+    display:inline;
   }
 }
 
