@@ -10,18 +10,46 @@ body{
 
 h1,h2,h3,h4{
   font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+}
+
+p{
+  text-align: justify;
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
+#main-logo {
   width: 80%;
 }
 
-.header {
+#panel1 {
   background-color: #ffffff;
+}
+
+
+.header{
+  height:25%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.header object{
+  height:100%;
+}
+
+.floatContainer{
+  width:100%;
+  overflow: hidden;
+}
+
+.floating{
+  position: absolute;
+  box-shadow: rgba(100, 100, 100, 0.6) 0px 0px 12px 0px;
+  z-index: -1;
 }
 
 .background {
@@ -76,6 +104,9 @@ h1,h2,h3,h4{
 .panel {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .blue {
@@ -90,59 +121,31 @@ a {
 #panel2 {
   color: white;
 }
-
-#panel2 .container {
-  width: 60%;
-  margin-left:7vh; 
-}
-
-.middle{
-  top: 40%;
-}
-
-.leftBack{
-  position:absolute;
-  height:100%;
-  left:3vh;
-}
-
-.rightBack{
-  position:absolute;
-  height:100%;
-  right:3vh;
-}
-
 .bigScreen{
   display:None;
 }
 
-.rect{
-  background-color: white;
-  border-radius: 1em;
+hr{
+  border:2px dashed white;
+  border-radius: 10px;
 }
-
 
 /* Larger than mobile screen */
 @media (min-width: 40rem) {
   body{
     font-size:16px;
   }
-  .App-logo {
+  #main-logo {
     width: 70%;
   }
   .container {
-    width: 80%;
+    width: 70%;
   }
   .menu {
     width: 70%;
   }
   .card img {
     width: 30%;
-  }
-  #panel2 .container {
-    width: 50%;
-    top: 38%;
-    margin:auto; 
   }
   .leftBack{
     left:15vh;
@@ -158,11 +161,11 @@ a {
 
 /* Larger than tablet screen */
 @media (min-width: 80rem) {
-  .App-logo {
+  #main-logo {
     width: 50%;
   }
   .container {
-    width: 70%;
+    width: 50%;
   }
   .menu {
     width: 50%;
@@ -174,7 +177,7 @@ a {
 
 /* Larger than desktop screen */
 @media (min-width: 120rem) {
-  .App-logo {
+  #main-logo {
     width: 40%;
   }
   .container {

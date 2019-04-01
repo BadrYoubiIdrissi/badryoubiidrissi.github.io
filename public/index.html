@@ -28,10 +28,10 @@
 </head>
 
 <body>
-  <div class="header panel">
+  <div class="panel" id="panel1">
     <div id="header-particles" class="background"></div>
     <div class="container vertical-spaced">
-      <div class="App-logo">
+      <div id="main-logo">
         <img src="assets/Full_logo.svg" alt="logo" />
       </div>
       <div class="row menu">
@@ -63,10 +63,8 @@
     </div>
   </div>
   <div class="panel blue" id="panel2">
-    <object type="image/svg+xml" data="assets/summary_anim_left.svg" class="leftBack" id="summary_anim_left"></object>
-    <object type="image/svg+xml" data="assets/summary_anim_right.svg" class="rightBack"
-      id="summary_anim_right"></object>
-    <div class="container middle">
+    <div class="header"><object type="image/svg+xml" data="assets/summary_header.svg" id="summary_header"></object></div>
+    <div class="container">
       <h2>Summary</h2>
       <p>
         From my primitive use of HTML at 11 years old to self-learning
@@ -74,7 +72,7 @@
         technology and Artificial Intelligence. What would be more fascinating
         or poetic than cracking the secrets of what makes us unique: learning?
       </p>
-      <p class="bigScreen">
+      <p>
         I am currently a first year Master’s Student in CentraleSupélec Paris, one of France’s
         best engineering schools, persuing a research career in Artificial
         Intelligence.
@@ -82,18 +80,26 @@
     </div>
   </div>
   </div>
+  <div class="floatContainer">
+  <img src="assets/example.png" class="floating"/>
+  <img src="assets/example.png" class="floating"/>
+  <img src="assets/example.png" class="floating"/>
+  <img src="assets/example.png" class="floating"/>
+  <img src="assets/example.png" class="floating"/>
+  <img src="assets/example.png" class="floating"/>
+  <img src="assets/example.png" class="floating"/>
+  <img src="assets/example.png" class="floating"/>
+  <img src="assets/example.png" class="floating"/>
+  <img src="assets/example.png" class="floating"/>
+  </div>
   <div class="panel header" id="panel3">
-    <img src="assets/left_research.png" class="leftBack"/>
-    <img src="assets/left_research.png" class="rightBack"/>
-    <div class="container middle">
-      <div class="rect">
+    <div class="container">
         <h2>Research</h2>
         <p>
-            I conducted research in the MICS Laboratory of Centrale Supelec on the interpretability of deep learning models (More specifically Convolutional Neural Networks) in Audio classification. 
+            Conducted research in the MICS Laboratory of Centrale Supelec on the interpretability of deep learning models (More specifically Convolutional Neural Networks) in Audio classification. 
             Trained Music genre classification CNNs to 80 percent accuracy on GTZAN dataset. Then used state of the art feature visualization techniques and style transfer to understand what the model really learns.
             Began a scientific paper draft with the supervision of Céline Hudelot, head of the Computer Science sector of the MICS Laboratory. 
         </p>
-      </div>
     </div>
   </div>
   <div class="panel blue" id="panel4"></div>

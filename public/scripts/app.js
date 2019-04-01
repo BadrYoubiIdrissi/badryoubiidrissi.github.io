@@ -1,10 +1,15 @@
 particlesJS.load("header-particles", headerParticles);
 
-function animateDraw(path, time = 1) {
+function resetPath(path) {
   var l = path.getTotalLength();
-  var tl = new TimelineMax();
   var num = Math.ceil(1+l);
-  tl.set(path, { strokeDasharray: num, strokeDashoffset: num , immediateRender:true});
+  TweenMax.set(path, { strokeDasharray: num, strokeDashoffset: num , immediateRender:true});
+}
+
+function animateDraw(path, time = 1) {
+  var tl = new TimelineMax();
+  var l = path.getTotalLength();
+  var num = Math.ceil(1+l);
   tl.to(path, time, { strokeDashoffset: num - l });
   return tl;
 }
@@ -73,6 +78,19 @@ function animateFire(fire) {
   return tl;
 }
 
+function floatRight(elements){
+  const width = $("body").width();
+  for (var el of elements){
+    var speed = 50+70*Math.random();
+    const elWidth = el.clientWidth;
+    const height = elWidth*Math.random()/3-elWidth/3;
+    const pos = (width+2*elWidth)*Math.random()-elWidth;
+    var tl = new TimelineMax({repeat:-1});
+    tl.fromTo(el, (width-pos)/speed, {x:pos, y:height}, {x:width, y:height, ease:"linear"})
+      .fromTo(el, (pos+elWidth)/speed, {x:-elWidth, y:height}, {x:pos, y:height,ease:"linear"})
+  }
+}
+
 function animateFire(fire) {
   var tl = new TimelineMax();
   tl.set(fire, { transformOrigin: "50% 100%", immediateRender: true });
@@ -115,54 +133,54 @@ function mapAni(arr, animFunction, time){
 }
 
 $(window).on("load", function() {
-  var leftSVG = document.getElementById("summary_anim_left").contentDocument,
-    neurones = leftSVG.getElementsByClassName("neurone"),
-    synapses = leftSVG.getElementsByClassName("synapse"),
-    synapses1 = leftSVG.getElementsByClassName("synapse1"),
-    main_syn = leftSVG.getElementById("main-synapse"),
-    rightSVG = document.getElementById("summary_anim_right").contentDocument,
-    icons = rightSVG.getElementById("icons"),
-    question = rightSVG.getElementById("question"),
-    question_mark = rightSVG.getElementById("question_mark")
-    leftBracket = rightSVG.getElementById("left-bracket"),
-    middle = rightSVG.getElementById("middle"),
-    rightBracket = rightSVG.getElementById("right-bracket"),
-    fire = rightSVG.getElementsByClassName("fire"),
-    secondary_syn = rightSVG.getElementById("secondary-synapse");
+  var svg = document.getElementById("summary_header").contentDocument,
+    neurones = svg.getElementsByClassName("neurone"),
+    synapse0 = svg.getElementsByClassName("synapse0"),
+    synapse1 = svg.getElementsByClassName("synapse1"),
+    synapse2 = svg.getElementsByClassName("synapse2"),
+    tech_sym = svg.getElementsByClassName("technology_sym"),
+    question_path = svg.getElementById("question_path"),
+    question_dot = svg.getElementById("question_dot"),
+    technology = svg.getElementById("technology"),
+    curiosity = svg.getElementById("curiosity"),
+    passion = svg.getElementById("passion");
 
   var controller = new ScrollMagic.Controller({
     globalSceneOptions: {
-      triggerHook: "onCenter"
+      triggerHook: "onCenter",
+      duration:"50%"
     }
   });
 
   // get all slides
   var slides = document.querySelectorAll(".panel");
 
+  [].forEach.call(synapse0, elem => resetPath(elem));
+  [].forEach.call(synapse1, elem => resetPath(elem));
+  [].forEach.call(synapse2, elem => resetPath(elem));
+  [].forEach.call(tech_sym, elem => resetPath(elem));
+  resetPath(question_path);
+
+  floatRight(document.getElementsByClassName("floating"));
+
   var tl = new TimelineMax()
-    .add("origin", 0)
-    .from(neurones, 0.3, { fill: "#104354" }, "origin")
-    .add(mapAni(synapses, animateDraw, 0.5))
-    .add(mapAni(synapses1, animateDraw, 0.5))
-    .add("brain")
-    .from("#panel2 h2", 1, {autoAlpha:0, y:10})
-    .from("#panel2 p", 1, {autoAlpha:0, y:10}, "-=0.5")
-    .add(animateDraw(main_syn, 2),"brain")
-    .add(animateDraw(secondary_syn, 2), "brain")
+    .add(mapAni(synapse0, animateDraw, 0.5))
+    .from(neurones, 0.3, { fill: "#104354" })
+    .add(mapAni(synapse1, animateDraw, 0.5))
+    .add(mapAni(synapse2, animateDraw, 0.5))
     .add("end_syn")
-    .from(icons, 0.2, {opacity:0})
-    .add(animateChase(question,dashArray(1, 1000),dashArray(100, 1000),100, 1), "end_syn")
-    .from(question_mark, 0.3, {scale: 0})
-    .add(animateFire(fire), "end_syn")
-    .add(animateChase(leftBracket, dashArray(1, 1000), dashArray(65, 1000), 65, 1), "end_syn")
-    .add(animateChase(middle, dashArray(1, 1000), dashArray(47, 1000), 47, 1), "end_syn")
-    .add(animateChase(rightBracket, dashArray(1, 1000), dashArray(67, 1000), 67, 1), "end_syn");
+    .add(mapAni(tech_sym, animateDraw, 1))
+    .add(animateDraw(question_path, 0.5))
+    .from(question_dot, 0.3, {scale:0})
+    .from(technology, 0.3, {opacity:0})
+    .from(passion, 0.3, {opacity:0})
+    .from(curiosity, 0.3, {opacity:0})
+    
   new ScrollMagic.Scene({
     triggerElement: slides[1]
   })
     .setTween(tl)
     .addTo(controller);
-
   
 
   controller.scrollTo(function(newpos) {
