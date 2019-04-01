@@ -25,9 +25,14 @@ p{
   width: 80%;
 }
 
-#panel1 {
-  background-color: #ffffff;
+.shadow-down {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px -5px;
 }
+
+.shadow-up {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px -10px 10px -5px;
+}
+
 
 
 .header{
@@ -48,7 +53,7 @@ p{
 
 .floating{
   position: absolute;
-  box-shadow: rgba(100, 100, 100, 0.6) 0px 0px 12px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 12px 0px;
   z-index: -1;
 }
 
