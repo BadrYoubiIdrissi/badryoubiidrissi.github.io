@@ -86,8 +86,8 @@ function floatRight(elements){
     const height = elWidth*Math.random()/3-elWidth/3;
     const pos = (width+2*elWidth)*Math.random()-elWidth;
     var tl = new TimelineMax({repeat:-1});
-    tl.fromTo(el, (width-pos)/speed, {x:pos, y:height}, {x:width, y:height, ease:"linear"})
-      .fromTo(el, (pos+elWidth)/speed, {x:-elWidth, y:height}, {x:pos, y:height,ease:"linear"})
+    tl.fromTo(el, (width-pos)/speed, {x:pos, y:height}, {x:width, y:height, ease:Linear.easeNone})
+      .fromTo(el, (pos+elWidth)/speed, {x:-elWidth, y:height}, {x:pos, y:height, ease:Linear.easeNone})
   }
 }
 
