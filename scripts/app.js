@@ -206,6 +206,7 @@ function yoffset(targetbox){
 }
 
 $(window).on("load", function () {
+  $('.loader').fadeOut();
   var svg = document.getElementById("summary_header").contentDocument,
     neurones = svg.getElementsByClassName("neurone"),
     synapse0 = svg.getElementsByClassName("synapse0"),
