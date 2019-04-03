@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100pt" height="100pt" viewBox="0 0 100 100" version="1.1">
-<g id="surface1">
-<path style="fill:none;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(11.372549%,48.627451%,65.490196%);stroke-opacity:1;stroke-dasharray:230.930035,230.930035;stroke-miterlimit:4;" d="M 24.300781 30 C 11.398438 30 5 43.300781 5 50 C 5 56.699219 11.398438 70 24.300781 70 C 43.601562 70 56.398438 30 75.699219 30 C 88.601562 30 95 43.300781 95 50 C 95 56.699219 88.601562 70 75.699219 70 C 56.398438 70 43.601562 30 24.300781 30 Z M 24.300781 30 "/>
-</g>
-</svg>
+<svg width="100px"  height="100px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-infinity" style="background: none;"><path fill="none" ng-attr-stroke="{{config.stroke}}" ng-attr-stroke-width="{{config.width}}" ng-attr-stroke-dasharray="{{config.dasharray}}" d="M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z" stroke="#ffffff" stroke-width="4" stroke-dasharray="230.93003540039064 25.658892822265614"><animate attributeName="stroke-dashoffset" calcMode="linear" values="0;256.58892822265625" keyTimes="0;1" dur="1" begin="0s" repeatCount="indefinite"></animate></path></svg>

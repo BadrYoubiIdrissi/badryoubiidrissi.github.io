@@ -11,7 +11,7 @@ body,
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url("assets/infinity.svg") 50% 50% no-repeat ;
+	background: url("assets/infinity.svg") 50% 50% no-repeat #1d7ca7;
 }
 
 html {
