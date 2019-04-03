@@ -16,10 +16,8 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  <!--
   <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css" />
   <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css" />
-  -->
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/milligram.min.css" />
 
@@ -65,7 +63,7 @@
   <div class="panel blue shadow-down" id="panel2">
     <div class="header"><object type="image/svg+xml" data="assets/summary_header.svg" id="summary_header"></object>
     </div>
-    <div class="container">
+    <div class="container" style="margin-top:3em;">
       <h2>Summary</h2>
       <p>
         From my primitive use of HTML at 11 years old to self-learning
@@ -81,18 +79,18 @@
     </div>
   </div>
   </div>
-  <div class="panel header" id="panel3">
+  <div class="panel" id="panel3">
     <div class="floatContainer">
-      <img src="assets/research/block1_conv2_filter20.png" class="floating" />
-      <img src="assets/research/block1_conv2_filter24.png" class="floating" />
-      <img src="assets/research/block1_conv2_filter8.png" class="floating" />
-      <img src="assets/research/block2_conv1_filter34.png" class="floating" />
-      <img src="assets/research/block2_conv2_filter0.png" class="floating" />
-      <img src="assets/research/block2_conv2_filter16.png" class="floating" />
-      <img src="assets/research/block2_conv2_filter26.png" class="floating" />
-      <img src="assets/research/block3_conv1_filter17.png" class="floating" />
-      <img src="assets/research/block3_conv1_filter21.png" class="floating" />
-      <img src="assets/research/block3_conv1_filter27.png" class="floating" />
+      <img src="assets/research/block1_conv2_filter20.png" class="floating-down" />
+      <img src="assets/research/block1_conv2_filter24.png" class="floating-down" />
+      <img src="assets/research/block1_conv2_filter8.png" class="floating-down" />
+      <img src="assets/research/block2_conv1_filter34.png" class="floating-down" />
+      <img src="assets/research/block2_conv2_filter0.png" class="floating-down" />
+      <img src="assets/research/block2_conv2_filter16.png" class="floating-down" />
+      <img src="assets/research/block2_conv2_filter26.png" class="floating-down" />
+      <img src="assets/research/block3_conv1_filter17.png" class="floating-down" />
+      <img src="assets/research/block3_conv1_filter21.png" class="floating-down" />
+      <img src="assets/research/block3_conv1_filter27.png" class="floating-down" />
     </div>
     <div class="container">
       <h2>Research</h2>
@@ -106,19 +104,104 @@
       </p>
     </div>
     <div class="floatContainer">
-      <img src="assets/research/block3_conv1_filter30.png" class="floating" />
-      <img src="assets/research/block3_conv1_filter33.png" class="floating" />
-      <img src="assets/research/block3_conv1_filter37.png" class="floating" />
-      <img src="assets/research/block3_conv1_filter39.png" class="floating" />
-      <img src="assets/research/block3_conv1_filter6.png" class="floating" />
-      <img src="assets/research/block3_conv2_filter28.png" class="floating" />
-      <img src="assets/research/block3_conv2_filter37.png" class="floating" />
-      <img src="assets/research/block3_conv2_filter8.png" class="floating" />
-      <img src="assets/research/block3_conv2_filter9.png" class="floating" />
-      <img src="assets/research/block1_conv2_filter16.png" class="floating" />
+      <img src="assets/research/block3_conv1_filter30.png" class="floating-up" />
+      <img src="assets/research/block3_conv1_filter33.png" class="floating-up" />
+      <img src="assets/research/block3_conv1_filter37.png" class="floating-up" />
+      <img src="assets/research/block3_conv1_filter39.png" class="floating-up" />
+      <img src="assets/research/block3_conv1_filter6.png" class="floating-up" />
+      <img src="assets/research/block3_conv2_filter28.png" class="floating-up" />
+      <img src="assets/research/block3_conv2_filter37.png" class="floating-up" />
+      <img src="assets/research/block3_conv2_filter8.png" class="floating-up" />
+      <img src="assets/research/block3_conv2_filter9.png" class="floating-up" />
+      <img src="assets/research/block1_conv2_filter16.png" class="floating-up" />
     </div>
   </div>
-  <div class="panel blue shadow-up" id="panel4"></div>
+  <div class="seperator shadow-up">
+    <h3>Projects</h3>
+  </div>
+  <div class="panel blue" id="panel4">
+    <div class="header"><object type="image/svg+xml" data="assets/allianz_header.svg" id="allianz_header"></object>
+    </div>
+    <div class="container" style="margin-top:5em;">
+      <h2>Support Ticket Analysis : Allianz</h2>
+      <p>
+        Worked with Allianz (world leading insurance company) on high level analysis of the support ticket flow to
+        prevent quality of service risks. With a considerable amount of archived support tickets we set out to extract
+        signals that suggest an incoming risk of quality of service caused by a bug, human error or something else. We
+        trained state of the art Language Models on Allianz's support tickets. These tickets are often very technical
+        and contain many spelling mistakes. This required careful tuning and analysis of the models. We overcome data
+        engineering challenges such as memory management due to the large amount of tickets and the heavy preprocessing.
+        We came up with a complete pipeline that would later train on labeled data in order to classify these tickets.
+      </p>
+    </div>
+  </div>
+  <div class="panel" id="panel5">
+    <div class="header"><img src="assets/qlearning.gif"></div>
+    <div class="container" style="margin-top:5em;">
+      <h2>Deep Reinforcement Learning Project</h2>
+      <p>
+        Implemented Deep Q Learning from scratch (using keras) from the original mnih et al 2013 article. This
+        reinforcement learning algorithm defines an agent that learns to play a game with only the raw image as input.
+        The agent successfully learned how to play the Chrome Trex easter egg game achieving almost human like skill.
+      </p>
+    </div>
+  </div>
+  <div class="panel blue" id="panel6">
+    <div class="floatContainer">
+      <img src="assets/epidemium/Albania.png" class="floating-down" />
+      <img src="assets/epidemium/Antigua and Barbuda.png" class="floating-down" />
+      <img src="assets/epidemium/Argentina.png" class="floating-down" />
+      <img src="assets/epidemium/Armenia.png" class="floating-down" />
+      <img src="assets/epidemium/Aruba.png" class="floating-down" />
+      <img src="assets/epidemium/Australia.png" class="floating-down" />
+      <img src="assets/epidemium/Austria.png" class="floating-down" />
+      <img src="assets/epidemium/Azerbaijan.png" class="floating-down" />
+      <img src="assets/epidemium/Bahrain.png" class="floating-down" />
+      <img src="assets/epidemium/Barbados.png" class="floating-down" />
+    </div>
+    <div class="container">
+      <h2>Epidemium Challenge</h2>
+      <p>
+        Achieved second place in the Epidemium challenge 3 with a team of twelve people. An open challenge to match
+        cancer data with population factors (from developing countries, excluding Africa) that are thought to induce or
+        protect against cancer, pursuing an improvement of cancer models that have rarely been explored in these regions
+        of the world.
+
+        Applied state of the art machine learning models to predict cancer mortality in developing countries given a
+        socioeconomic context.
+
+        Processed several extensive and incomplete datasets (Coming from Food and Agriculture Organization and World
+        Health Organisation) and combined them.
+      </p>
+    </div>
+    <div class="floatContainer">
+        <img src="assets/epidemium/Belarus.png" class="floating-up" />
+        <img src="assets/epidemium/Belgium.png" class="floating-up" />
+        <img src="assets/epidemium/Belize.png" class="floating-up" />
+        <img src="assets/epidemium/Bermuda.png" class="floating-up" />
+        <img src="assets/epidemium/Brazil.png" class="floating-up" />
+        <img src="assets/epidemium/British Virgin Islands.png" class="floating-up" />
+        <img src="assets/epidemium/Brunei Darussalam.png" class="floating-up" />
+        <img src="assets/epidemium/Bulgaria.png" class="floating-up" />
+        <img src="assets/epidemium/Canada.png" class="floating-up" />
+        <img src="assets/epidemium/Cayman Islands.png" class="floating-up" />
+    </div>
+  </div>
+  <div class="panel" id="panel7">
+    <div class="container">
+      <h2>Self Learning Crawling Robot</h2>
+      <p>
+        Implemented NeuroEvolution of Augmenting Topologies (NEAT) algorithm from scratch interfaced with V-REP
+        simulation software to train a recurrent neural network with a genetic algorithm to control a double articulated
+        crawling robot.
+
+        This was my project submission to the competitive entrance exam to Engineering Schools. It is equivalent to
+        around 350 hours of work and got an A+ grade with congratulations of the jury.
+
+        Under the supervision of Mr LEGROS Stéphane and Mr MAHÉ Étienne, first and second year Maths teachers.
+      </p>
+    </div>
+  </div>
 </body>
 <!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
