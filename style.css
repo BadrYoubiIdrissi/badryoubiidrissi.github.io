@@ -30,15 +30,16 @@ p{
 }
 
 .header{
+  width:auto;
   max-height:25%;
-  width: auto;
   display: flex;
   justify-content: center;
   align-items: stretch;
 }
 
-.header object{
-  height:100%;
+.header *{
+  height: 100%;
+  width:auto;
 }
 
 .floatContainer{
