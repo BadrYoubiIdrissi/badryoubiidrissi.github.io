@@ -116,7 +116,7 @@ p{
   align-items: center;
 }
 .card h4 {
-  margin: 0;
+  margin: 1em 0 0 0;
 }
 .card:hover {
   border-bottom: 0.3rem solid #1d7ca7;
@@ -193,10 +193,42 @@ a {
   display:None;
 }
 
-hr{
-  border:2px dashed white;
-  border-radius: 10px;
+#links{
+  position:fixed;
+  width: fit-content; 
+  z-index: 10;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  border-radius: 0 10px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 12px 0px;
+  transition: box-shadow 0.3s, background 0.3s, border-radius 0.3s;
+  bottom:0;
 }
+
+#links a{
+  transition: box-shadow 0.3s, background 0.3s, border-radius 0.3s;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+#links:hover{
+  box-shadow: none;
+  background: none;
+}
+
+#links img{
+  height: 3vh;
+  margin: 1vh;
+  display: block;
+}
+
+#links a:hover{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 12px 0px;
+  background-color: white;
+}
+
 
 /* Larger than mobile screen */
 @media (min-width: 40rem) {
